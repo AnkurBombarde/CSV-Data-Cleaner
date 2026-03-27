@@ -1,7 +1,4 @@
-"""
-Data Analyzer Module
-Analyzes data quality issues and provides insights
-"""
+
 
 import pandas as pd
 import numpy as np
@@ -9,19 +6,9 @@ from typing import Dict, List
 
 
 class DataAnalyzer:
-    """Analyzes data quality and provides comprehensive insights"""
     
     @staticmethod
     def analyze_missing_values(df: pd.DataFrame) -> Dict:
-        """
-        Analyze missing values in the dataset
-        
-        Args:
-            df: Input dataframe
-            
-        Returns:
-            Dictionary with missing value analysis
-        """
         if df is None or df.empty:
             return {}
         
@@ -41,15 +28,6 @@ class DataAnalyzer:
     
     @staticmethod
     def analyze_duplicates(df: pd.DataFrame) -> Dict:
-        """
-        Analyze duplicate rows in the dataset
-        
-        Args:
-            df: Input dataframe
-            
-        Returns:
-            Dictionary with duplicate analysis
-        """
         if df is None or df.empty:
             return {}
         
@@ -68,15 +46,6 @@ class DataAnalyzer:
     
     @staticmethod
     def analyze_data_types(df: pd.DataFrame) -> Dict:
-        """
-        Analyze data types in the dataset
-        
-        Args:
-            df: Input dataframe
-            
-        Returns:
-            Dictionary with data type analysis
-        """
         if df is None or df.empty:
             return {}
         
@@ -97,15 +66,6 @@ class DataAnalyzer:
     
     @staticmethod
     def analyze_whitespace_issues(df: pd.DataFrame) -> Dict:
-        """
-        Detect columns with leading/trailing whitespace issues
-        
-        Args:
-            df: Input dataframe
-            
-        Returns:
-            Dictionary with whitespace issues
-        """
         if df is None or df.empty:
             return {}
         
@@ -126,15 +86,6 @@ class DataAnalyzer:
     
     @staticmethod
     def get_numeric_summary(df: pd.DataFrame) -> Dict:
-        """
-        Get statistical summary for numeric columns
-        
-        Args:
-            df: Input dataframe
-            
-        Returns:
-            Dictionary with numeric column statistics
-        """
         if df is None or df.empty:
             return {}
         
@@ -154,15 +105,6 @@ class DataAnalyzer:
     
     @staticmethod
     def generate_full_report(df: pd.DataFrame) -> Dict:
-        """
-        Generate a comprehensive data quality report
-        
-        Args:
-            df: Input dataframe
-            
-        Returns:
-            Dictionary with complete analysis
-        """
         if df is None or df.empty:
             return {}
         
