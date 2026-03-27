@@ -1,0 +1,11 @@
+Name,Age,Salary,Department,Email,Hire_Date,Performance_Score
+John Smith,32,65000,Sales,john.smith@company.com,2019-01-15,8.5
+Alice Johnson,28,75000,Engineering,alice.johnson@company.com,2020-03-22,9.2
+  Bob Williams  ,45,85000,Management,bob.williams@company.com,2015-06-10,8.1
+Alice Johnson,28,75000,Engineering,alice.johnson@company.com,2020-03-22,9.2
+Catherine Lee,,72000,Finance,catherine.lee@company.com,2018-11-05,8.8
+David Brown,35,70000,Sales,david.brown@company.com,2019-07-18,
+,38,95000,Engineering,frank.miller@company.com,2016-02-12,9.0
+Grace Martinez,29,68000,HR,grace.martinez@company.com,2021-04-14,8.3
+  henry taylor  ,52,,Management,henry.taylor@company.com,2012-09-20,8.6
+iris chen,31,73000,Finance,iris.chen@company.com,2019-12-03,8.9
