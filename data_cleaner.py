@@ -1,15 +1,9 @@
-"""
-Data Cleaner Module
-Handles data cleaning operations based on user selections
-"""
-
 import pandas as pd
 import numpy as np
 from typing import Dict, List, Any
 
 
 class DataCleaner:
-    """Performs data cleaning operations on dataframes"""
     
     @staticmethod
     def handle_missing_values(
@@ -18,18 +12,6 @@ class DataCleaner:
         fill_value: Any = None,
         columns: List[str] = None
     ) -> pd.DataFrame:
-        """
-        Handle missing values using specified strategy
-        
-        Args:
-            df: Input dataframe
-            strategy: 'remove', 'mean', 'median', 'mode', 'custom'
-            fill_value: Value to fill (for 'custom' strategy)
-            columns: Specific columns to apply strategy (None = all)
-            
-        Returns:
-            Cleaned dataframe
-        """
         df_copy = df.copy()
         
         if columns is None:
@@ -66,16 +48,6 @@ class DataCleaner:
     
     @staticmethod
     def remove_duplicates(df: pd.DataFrame, subset: List[str] = None) -> pd.DataFrame:
-        """
-        Remove duplicate rows
-        
-        Args:
-            df: Input dataframe
-            subset: Columns to consider for duplicates (None = all)
-            
-        Returns:
-            Dataframe with duplicates removed
-        """
         if subset:
             return df.drop_duplicates(subset=subset, keep='first')
         return df.drop_duplicates(keep='first')
@@ -86,17 +58,6 @@ class DataCleaner:
         columns: List[str],
         operations: Dict[str, bool]
     ) -> pd.DataFrame:
-        """
-        Apply text cleaning operations
-        
-        Args:
-            df: Input dataframe
-            columns: Columns to clean
-            operations: Dict with operations like {'lowercase': True, 'strip': True}
-            
-        Returns:
-            Cleaned dataframe
-        """
         df_copy = df.copy()
         
         for col in columns:
@@ -120,30 +81,10 @@ class DataCleaner:
     
     @staticmethod
     def remove_columns(df: pd.DataFrame, columns: List[str]) -> pd.DataFrame:
-        """
-        Remove specified columns
-        
-        Args:
-            df: Input dataframe
-            columns: Columns to remove
-            
-        Returns:
-            Dataframe with columns removed
-        """
         return df.drop(columns=columns, errors='ignore')
     
     @staticmethod
     def rename_columns(df: pd.DataFrame, rename_dict: Dict[str, str]) -> pd.DataFrame:
-        """
-        Rename columns
-        
-        Args:
-            df: Input dataframe
-            rename_dict: Dictionary of old_name: new_name
-            
-        Returns:
-            Dataframe with renamed columns
-        """
         return df.rename(columns=rename_dict)
     
     @staticmethod
@@ -152,17 +93,6 @@ class DataCleaner:
         column: str,
         new_type: str
     ) -> pd.DataFrame:
-        """
-        Change data type of a column
-        
-        Args:
-            df: Input dataframe
-            column: Column to convert
-            new_type: Target type ('int', 'float', 'string', 'datetime')
-            
-        Returns:
-            Dataframe with converted column
-        """
         df_copy = df.copy()
         
         try:
@@ -181,14 +111,4 @@ class DataCleaner:
     
     @staticmethod
     def export_to_csv(df: pd.DataFrame, filename: str = 'cleaned_data.csv') -> bytes:
-        """
-        Export dataframe to CSV bytes
-        
-        Args:
-            df: Input dataframe
-            filename: Output filename
-            
-        Returns:
-            CSV file as bytes
-        """
         return df.to_csv(index=False).encode('utf-8')
