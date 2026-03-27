@@ -19,7 +19,6 @@ st.markdown("""
         
     }
 
-    /* Sticky, centered top navigation - Dark mode compatible */
     .st-key-top_nav {
         position: sticky;
         top: 0;
@@ -87,9 +86,7 @@ if 'analysis_report' not in st.session_state:
 
 
 def main():
-    """Main application function"""
 
-    # Header
     st.markdown("<h1 class='header-main'> CSV Data Cleaner</h1>", unsafe_allow_html=True)
     st.markdown("""
     **Upload, inspect, and clean your CSV files with ease.** This tool helps you identify and fix data quality issues like missing values, duplicates, and whitespace problems. 
@@ -108,9 +105,7 @@ def main():
 
     st.divider()
 
-    # ============================================
-    # PAGE 1: UPLOAD & INSPECT
-    # ============================================
+
     if page == " Upload & Inspect":
         st.header(" Upload & Inspect Your CSV File")
         st.markdown("Start by uploading your CSV file to begin the data cleaning process.")
@@ -169,9 +164,7 @@ def main():
         else:
             st.info("👆 Please upload a CSV file to get started!")
     
-    # ============================================
-    # PAGE 2: DATA ANALYSIS
-    # ============================================
+
     elif page == " Data Analysis":
         st.header(" Data Quality Analysis")
         
@@ -271,9 +264,7 @@ def main():
             else:
                 st.info("👆 Click the button above to generate a data quality report!")
     
-    # ============================================
-    # PAGE 3: DATA CLEANING
-    # ============================================
+
     elif page == " Clean Data":
         st.header(" Data Cleaning")
         
@@ -285,7 +276,6 @@ def main():
             st.markdown("**Select cleaning options below and apply them to your data.**")
             st.divider()
             
-            # Cleaning Options
             col1, col2 = st.columns(2)
             
             with col1:
@@ -385,9 +375,7 @@ def main():
             st.subheader(" Cleaned Data Preview")
             st.dataframe(st.session_state.cleaned_df, use_container_width=True)
     
-    # ============================================
-    # PAGE 4: SUMMARY & EXPORT
-    # ============================================
+
     elif page == " Summary & Export":
         st.header(" Before vs After Summary")
         
@@ -428,7 +416,6 @@ def main():
             
             st.divider()
             
-            # Detailed comparison
             st.subheader(" Detailed Changes")
             
             # Missing values before/after
@@ -472,7 +459,6 @@ def main():
                     use_container_width=True
                 )
             
-            # Option to download comparison report
             if st.button(" Generate Comparison Report", use_container_width=True):
                 report = f"""
 # Data Cleaning Report
