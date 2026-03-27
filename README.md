@@ -20,19 +20,19 @@ streamlit run app.py
 
 ## 🎯 Features
 
-- **📤 Upload & Inspect**: Load CSV files with validation and preview
-- **🔍 Data Analysis**: Detect missing values, duplicates, whitespace issues, and data types
-- **🧽 Data Cleaning**: Remove duplicates, handle missing values, clean text, rename/remove columns, convert data types
-- **📊 Before/After Comparison**: Track improvements and generate cleaning reports
-- **📥 Export**: Download cleaned data as CSV
+- ** Upload & Inspect**: Load CSV files with validation and preview
+- ** Data Analysis**: Detect missing values, duplicates, whitespace issues, and data types
+- ** Data Cleaning**: Remove duplicates, handle missing values, clean text, rename/remove columns, convert data types
+- ** Before/After Comparison**: Track improvements and generate cleaning reports
+- ** Export**: Download cleaned data as CSV
 
 ---
 
 ## 📖 How to Use
 
-1. **Upload**: Go to "📤 Upload & Inspect" and select your CSV file
+1. **Upload**: Go to " Upload & Inspect" and select your CSV file
 2. **Analyze**: Click "Generate Analysis Report" to identify data quality issues
-3. **Clean**: In "🧽 Clean Data", apply operations (remove duplicates, fill missing values, clean text, etc.)
+3. **Clean**: In " Clean Data", apply operations (remove duplicates, fill missing values, clean text, etc.)
 4. **Export**: Download your cleaned data from "📊 Summary & Export"
 
 ---
@@ -126,11 +126,7 @@ streamlit run app.py
 
 ---
 
-## 📄 License
 
-Open source and available for educational purposes.
-
----
 
 ## 🆘 Support
 
