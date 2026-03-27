@@ -215,16 +215,6 @@ Multiple cleaning strategies:
 3. Download cleaned CSV file
 4. Download cleaning report (optional)
 
-### Key Features at a Glance
-
-| Feature | Location | Purpose |
-|---------|----------|---------|
-| Upload CSV | 📤 Upload & Inspect | Load and preview data |
-| Analyze Quality | 🔍 Data Analysis | Identify data issues |
-| Clean Data | 🧽 Clean Data | Apply cleaning operations |
-| View Summary | 📊 Summary & Export | Compare before/after |
-| Download | 📊 Summary & Export | Get cleaned CSV file |
-
 ### Common Operations
 
 #### Remove Missing Values
@@ -287,79 +277,6 @@ Multiple cleaning strategies:
 
 ---
 
-## 🔄 Full Workflow Example
-
-```
-1. UPLOAD
-   └─ Upload sample_data.csv
-
-2. INSPECT
-   └─ View: 10 rows, 7 columns
-   └─ See: Missing values, duplicates, extra spaces
-
-3. ANALYZE
-   └─ Click "Generate Analysis Report"
-   └─ Identify: 3 missing values, 1 duplicate, whitespace issues
-
-4. CLEAN
-   └─ Handle Missing Values → Remove rows
-   └─ Remove Duplicates → Remove Duplicate Rows
-   └─ Clean Text → Strip spaces, Capitalize
-
-5. REVIEW
-   └─ See improvements: 9 rows (1 removed), 0 duplicates
-   └─ Missing values reduced from 3 to 0
-
-6. EXPORT
-   └─ Download cleaned CSV file
-   └─ Use cleaned data for analysis
-```
-
----
-
-## 📁 Project Structure
-
-```
-CSV Data Cleaner/
-├── app.py                 # Main Streamlit application
-├── data_loader.py         # File loading and preview module
-├── data_analyzer.py       # Data quality analysis module
-├── data_cleaner.py        # Data cleaning operations module
-├── requirements.txt       # Package dependencies
-├── README.md             # This file
-└── sample_data.csv       # Sample CSV file for testing
-```
-
----
-
-## 🏗️ Project Architecture
-
-### System Design
-
-```
-┌─────────────────────────────────────────────────┐
-│         Streamlit Web Interface (app.py)        │
-│                                                 │
-│  📤 Upload  │  🔍 Analyze  │  🧽 Clean  │ 📊 Export
-└─────────────────────────────────────────────────┘
-          │              │              │
-          ↓              ↓              ↓
-┌──────────────┐  ┌──────────────┐  ┌──────────────┐
-│ DataLoader   │  │ DataAnalyzer │  │ DataCleaner  │
-│              │  │              │  │              │
-│ • load_csv   │  │ • missing    │  │ • handle_mv  │
-│ • get_info   │  │ • duplicates │  │ • remove_dup │
-│ • preview    │  │ • types      │  │ • clean_text │
-│              │  │ • whitespace │  │ • remove_col │
-│              │  │ • stats      │  │ • rename_col │
-│              │  │ • report     │  │ • change_type│
-│              │  │              │  │ • export     │
-└──────────────┘  └──────────────┘  └──────────────┘
-          │              │              │
-          └──────────────┴──────────────┘
-                   ↓
-              Pandas DataFrames
-```
 
 ### Module Design
 
