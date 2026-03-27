@@ -20,7 +20,7 @@ streamlit run app.py
 
 ## 🎯 Features
 
-- ** Upload & Inspect**: Load CSV files with validation and preview
+- **Upload & Inspect**: Load CSV files with validation and preview
 - ** Data Analysis**: Detect missing values, duplicates, whitespace issues, and data types
 - ** Data Cleaning**: Remove duplicates, handle missing values, clean text, rename/remove columns, convert data types
 - ** Before/After Comparison**: Track improvements and generate cleaning reports
